@@ -1,0 +1,123 @@
+.upload-section {
+  margin-bottom: 40px;
+}
+
+.upload-area {
+  background: rgba(255, 255, 255, 0.95);
+  border: 3px dashed rgba(102, 126, 234, 0.4);
+  border-radius: 16px;
+  padding: 60px 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+  background: white;
+  border-color: rgba(102, 126, 234, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.upload-area.drag-active {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: #667eea;
+  transform: scale(1.02);
+}
+
+.upload-area.processing {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.upload-area.processing:hover {
+  transform: none;
+}
+
+.upload-icon {
+  width: 80px;
+  height: 80px;
+  color: #667eea;
+  margin: 0 auto 20px;
+}
+
+.upload-area h3 {
+  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+.upload-hint {
+  color: #666;
+  font-size: 16px;
+  margin: 0 0 8px 0;
+}
+
+.upload-note {
+  color: #999;
+  font-size: 14px;
+  margin: 0 0 24px 0;
+}
+
+.btn-upload {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-upload:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.processing-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(102, 126, 234, 0.2);
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.processing-state p {
+  color: #667eea;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .upload-area {
+    padding: 40px 20px;
+  }
+
+  .upload-area h3 {
+    font-size: 22px;
+  }
+
+  .upload-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
